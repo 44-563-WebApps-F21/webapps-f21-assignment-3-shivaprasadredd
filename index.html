@@ -51,5 +51,24 @@
                 <td>$4.00</td>
             </tr>
         </table>
+        <hr>
+        <h4>Code Display</h4>
+        <blockquote>
+            In mathematics, the Z function is a function used for studying the Riemann zeta function 
+            along the critical line where the argument is one-half. 
+            It is also called the Riemann–Siegel Z function, the Riemann–Siegel zeta function, 
+            the Hardy function, the Hardy Z function and the Hardy zeta function.
+        </blockquote>
+        <a href="https://en.wikipedia.org/wiki/Z_function"> Source code link</a>
+        <pre>
+            vector<int> z_function_trivial(string s) 
+            {
+             int n = (int) s.length();
+             vector<int> z(n);
+             for (int i = 1; i < n; ++i)
+             while (i + z[i] < n && s[z[i]] == s[i + z[i]])++z[i];
+             return z;
+            }
+        </pre>
     </body>
 </html>    
